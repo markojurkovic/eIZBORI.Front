@@ -6,26 +6,35 @@ class ListElement extends Component {
     super(props);
     this.name = this.props.name;
   }
+
+  handleChange = event => {
+    this.props.onCheckboxClicked(event.target.value);
+  };
+
   render() {
     return (
-      <li class="list-group-item">
-        <div class="container">
-          <div class="row align-items-center input-group-text">
-            <div class="col">
-              <img
-                src="https://avatars1.githubusercontent.com/u/9203900"
-                height="50"
-              />
-            </div>
-            <div class="col">
-              <p class="candidate-name">{this.name}</p>
-            </div>
-            <div class="col">
-              <input type="checkbox" name="vote" id="vote-checkbox" />
-            </div>
+      <div className="container-fluid">
+        <div className="row align-items-center input-group-text">
+          <div className="col">
+            <img
+              src="https://avatars1.githubusercontent.com/u/9203900"
+              height="50"
+            />
+          </div>
+          <div className="col-6">
+            <p className="candidate-name">{this.name}</p>
+          </div>
+          <div className="col">
+            <input
+              className="form-check-input position-static"
+              type="checkbox"
+              id="voteCheckbox"
+              value={this.props.name}
+              onChange={this.handleChange}
+            />
           </div>
         </div>
-      </li>
+      </div>
     );
   }
 }

@@ -1,13 +1,14 @@
 import React, { Component } from "react";
+import "./AddCandidature.css";
 
 class AddCandidature extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="myContainer container-fluid">
         <form>
-          <div className="row py-3">
+          <div className="form-row py-3">
             <div className="col">
-              <h3 class="text-center">
+              <h3 className="text-center">
                 Kandidiraj se za {this.props.role + "a"}
               </h3>
             </div>
@@ -15,7 +16,7 @@ class AddCandidature extends Component {
           <div className="row py-3">
             <div className="col text-center">
               <img
-                src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                src="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png"
                 alt="Slika profila"
                 height="100"
               />
@@ -23,15 +24,15 @@ class AddCandidature extends Component {
           </div>
           <div className="row py-3">
             <div className="col text-center">
-              <div class="custom-file">
+              <div className="custom-file">
                 <input
                   type="file"
-                  class="custom-file-input"
+                  className="custom-file-input"
                   id="inputGroupFile01"
                 />
                 <label
-                  class="custom-file-label"
-                  for="inputGroupFile01"
+                  className="custom-file-label"
+                  htmlFor="inputGroupFile01"
                 >
                   Dodaj sliku profila
                 </label>
@@ -40,7 +41,7 @@ class AddCandidature extends Component {
           </div>
           <div className="row py-3">
             <div className="col text-center">
-              <button class="btn btn-danger" type="button">
+              <button className="btn btn-danger" type="button">
                 Potvrdi
               </button>
             </div>

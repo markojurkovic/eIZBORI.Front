@@ -1,0 +1,14 @@
+.custom-file {
+  max-width: 70%;
+  min-width: 50%;
+}
+
+.custom-file-label {
+  text-align: left;
+}
+
+@media (max-width: 550px) {
+  .custom-file {
+    min-width: 100%;
+  }
+}
